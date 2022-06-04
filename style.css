@@ -1,0 +1,204 @@
+html{
+    background-image: url("./image/bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+}
+
+/* แถบเมนู */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+/* ภายใน */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:azure;
+    display: block;
+    transition: 0.3s;
+}
+
+/* ตอนกดเลือก */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 20px;
+}
+
+/* ยังไม่รู้ก็ไม่ใช้
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+*/
+
+video.center{
+    position: relative;
+    padding-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover{
+    color:black;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+h1 {
+    color:black; 
+    font-size: 18px;
+    padding: 2px 0px 5px 0px;
+    text-align: center;
+    font-family: courier;
+}
+
+p {color: black;
+    text-align: left;
+    margin-left: 20px;
+    font-family: courier;
+}
+
+h2 {
+    color:black; 
+    font-size: 18px;
+    text-align: center;
+    font-family: courier;
+}
+
+.wavetitle {
+    color: black;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-family:courier;
+}
+
+.wavetitle span{
+    display: inline-block;
+    animation: animate 1s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate{
+    20%{
+        transform: translateX(-70%);}
+    40%{
+        transform: translateY(0%);}
+}
+
+
+#sec-1{
+    height: 680px;
+    position:relative;
+    background-color:none;
+}
+
+#sec-2{
+    height: 680px;
+    background-color:rgb(104, 176, 212);
+    border-radius: 200px;
+}
+
+
+.scroll{
+    position: absolute;
+    height: 40px;
+    width: 65px;
+    border: 0.6px solid rgb(0, 0, 0);
+    margin: auto;   
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    border-radius:  260px;
+}
+
+.scroll::before,
+.scroll::after{
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border: 0.1px solid black;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll 1s ease-in-out infinite;
+}
+
+.scroll::after{
+    top: 10%;
+}
+
+@keyframes scroll{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 70%
+    }
+}
+
+.aboutme {
+    padding-top: 70px;
+    text-align: center;
+    color:black;
+    font-size: 20px;
+    font-family: courier;
+}
+
+.profile{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.icon{
+    padding: 2px 0px 2px 30px;
+    display: block;
+    width: 50px;
+}
+
+#bgvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
